@@ -12,7 +12,7 @@ public class ChatGPT {
     public static String sendPrompt(String prompt) {
        String uri = "https://api.openai.com/v1/chat/completions";
        String apiKey = System.getenv("GPT_KEY");
-       String model = "gpt-3.5-turbo-0125";
+       String model = "ft:gpt-3.5-turbo-1106:personal::B6Nze977";
 
        try {
             // URI uriObj = new URI(uri);
@@ -22,7 +22,7 @@ public class ChatGPT {
             connection.setRequestMethod("POST");
             connection.setRequestProperty("Authorization", "Bearer " + apiKey);
             connection.setRequestProperty("Content-Type", "application/json");
-
+        
             System.out.println("--------------------------------");
             System.out.println("\nSending prompt...");
             // The request body

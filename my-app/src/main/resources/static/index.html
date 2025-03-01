@@ -64,7 +64,7 @@ What resources are available to help me learn more about sustainability?"></text
 
         let newParagraph = document.createElement("p");
         newParagraph.setAttribute("class", "assistantResponse");
-        newParagraph.innerHTML = "Hawky says: " + result.answer;
+        newParagraph.innerHTML = "Hawky says: <br>" + result.answer;
         const assistantDiv = document.getElementById("assistant")
         assistantDiv.appendChild(newParagraph);
         assistantDiv.appendChild(document.createElement("br"));

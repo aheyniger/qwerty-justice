@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.qwerty.backend.ChatGPT;
 import com.qwerty.backend.Prompt;
 
 @RestController
@@ -15,11 +16,11 @@ public class BotController {
     public String receiveText(@RequestBody Prompt prompt) {
         System.out.println("Got prompt!!");
         System.out.println(prompt.query);
-        // String response = ChatGPT.sendPrompt(prompt.promptBody);
+        String response = ChatGPT.sendPrompt(prompt.query);
         
-        String response = "{\"answer\": \"" + prompt.query + "\"}";
-        response = response.replace("\n", "\\n");
-        return response;
+        String responseJson = "{\"answer\": \"" + response + "\"}";
+        responseJson = responseJson.replace("\n", "<br>");
+        return responseJson;
 
         // return "Received: " + prompt.promptBody;
     }
