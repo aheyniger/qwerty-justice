@@ -130,7 +130,7 @@ textarea {
     list-style: disc !important;  /* Ensure the bullet points are visible */
     padding-left: 20px;
   }
-  .info {
+  .info, .contact {
     margin-left: 40px;
     font-size: xx-large;
     display: flex;
