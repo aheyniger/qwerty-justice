@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HawkStainable</title>
     <link rel="stylesheet" href="index.css">
@@ -23,23 +24,23 @@
       <a href="./index.html" id="HawkStainable">HawkStainable</a>
       <div id="links">
           <a href="./education.html">Education</a>
-          <a href="./activity.html">Activity</a>
+          <a href="./activity.html">Injustice Resources & Reporting</a>
           <a href="./mission.html">Mission & Team</a>
           <button onclick="play()">Hawk</button>
       </div>
     </div>
     <div id="display">
         <h1 id="title">HawkStainable Living</h1>
-        <p id="subtitle">AI assisted sutainability eduaction for Lehigh and Bethlehem</p>
+        <p id="subtitle">AI assisted sutainability related injustice eduaction for Lehigh and Bethlehem</p>
     </div>
     <div id="assistant">
         <h2>Hawky: Our Sust<u><b>ai</b></u>nable Assistant</h2>
         <form id="assistantForm">
             <label for="query">What can Hawky help you learn about today?</label>
             <br />
-            <textarea id="queryInput" name="query" cols="60" rows="5" placeholder="How to properly recycle on campus?
-How can I make my lifestyle more sustainable?
-What resources are available to help me learn more about sustainability?"></textarea>
+            <textarea id="queryInput" name="query" cols="60" rows="5" placeholder="Can you give examples of environmental injustice in Bethlehem?
+What is environmental injustice?
+What resources are available to help me learn more about environmental injustice?"></textarea>
             <br />
             <button type="submit">Submit</button>
         </form>
@@ -64,7 +65,7 @@ What resources are available to help me learn more about sustainability?"></text
 
         let newParagraph = document.createElement("p");
         newParagraph.setAttribute("class", "assistantResponse");
-        newParagraph.innerHTML = "Hawky says: <br>" + result.answer;
+        newParagraph.innerHTML = "Hawky says: " + result.query;
         const assistantDiv = document.getElementById("assistant")
         assistantDiv.appendChild(newParagraph);
         assistantDiv.appendChild(document.createElement("br"));
