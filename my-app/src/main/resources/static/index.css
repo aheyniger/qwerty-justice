@@ -58,6 +58,13 @@ html, body {
 #assistant > h2 {
     font-size: min(3vw, 30px);
 }
+#footer {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 * {
     margin: 0px;
     padding: 0px;
