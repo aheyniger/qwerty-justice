@@ -27,4 +27,7 @@ $(document).ready(function () {
       $(this).toggleClass("active");
     });
   });
-  
+  function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+  }

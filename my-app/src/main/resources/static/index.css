@@ -2,17 +2,19 @@ html, body {
     margin: 0;
 }
 #header {
-    background-color:rgba(38, 38, 38, 1);
+    background-color:whitesmoke;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: min(100px, 15vh);
     padding: 0px 15px;
+    border: 6px black solid;
+    border-style: double;
+    margin: 8px;
 }
 #HawkStainable{
     margin: 5px;
-    background-color: white;
     border-radius: 3px;
     padding: 4px;
     font-size: 1.5rem;
@@ -25,7 +27,6 @@ html, body {
 }
 #links > * {
     margin: 5px;
-    background-color: white;
     border-radius: 3px;
     padding: 4px;
 }
