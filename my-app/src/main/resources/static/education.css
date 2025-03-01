@@ -31,7 +31,7 @@ html, body {
     padding: 4px;
 }
 #display {
-    background-image: url('./images/Rossin.jpg');
+    background-image: url('./images/background2.jpg');
     background-size: cover;
     height: 60vh;
     color: white;
@@ -47,7 +47,7 @@ html, body {
 #subtitle {
     font-size: 3vw;
     position: absolute;
-    top: 16.25vw;
+    top: 17.75vw;
     right: 2.5vw;
     width: 50vw;
     filter: drop-shadow(0 0 1rem black);
@@ -66,14 +66,46 @@ html, body {
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#education > h2 {
+    font-size: 64px;
+    margin-top: 5vw;
+    margin-left: 10px;
+}
+.info {
+    border: 2px solid gray;
+    border-radius: 8px;
+}
 form {
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+.info {
+    margin: 0px 20px;
+    min-height: 400px;
+}
+.info > h4, .info > h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 textarea {
     border-radius: 6px;
+}
+div > h5 {
+    color: gray;
+}
+.progress {
+    display: flex;
+    justify-content: space-between;
+}
+.course {
+    padding: 15px 40px;
 }
 * {
     margin: 0px;

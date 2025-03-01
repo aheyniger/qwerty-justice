@@ -31,8 +31,9 @@ html, body {
     padding: 4px;
 }
 #display {
-    background-image: url('./images/Rossin.jpg');
-    background-size: cover;
+    background-image: url('./images/rotunda.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 60vh;
     color: white;
     position: relative;
@@ -41,14 +42,17 @@ html, body {
     font-size: 7vw;
     position: absolute;
     top: 5vw;
-    right: 2.5vw;
+    left: 2.5vw;
     filter: drop-shadow(0 0 1rem black);
+}
+#team {
+    min-height: 300px;
 }
 #subtitle {
     font-size: 3vw;
     position: absolute;
-    top: 16.25vw;
-    right: 2.5vw;
+    bottom: 3.75vw;
+    right: -5.5vw;
     width: 50vw;
     filter: drop-shadow(0 0 1rem black);
 }
@@ -66,14 +70,46 @@ html, body {
     align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+#education > h2 {
+    font-size: 64px;
+    margin-top: 5vw;
+    margin-left: 10px;
+}
+.info {
+    border: 2px solid gray;
+    border-radius: 8px;
+}
 form {
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+.info {
+    margin: 0px 20px;
+    min-height: 400px;
+}
+.info > h4, .info > h5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+}
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 textarea {
     border-radius: 6px;
+}
+div > h5 {
+    color: gray;
+}
+.progress {
+    display: flex;
+    justify-content: space-between;
+}
+.course {
+    padding: 15px 40px;
 }
 * {
     margin: 0px;

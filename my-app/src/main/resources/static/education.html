@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HawkStainable</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="education.css">
     <script defer src="index.js"></script>
     <!-- Add Owl Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -20,64 +20,43 @@
 <body>
     <audio id="audio" src="./audio/hawk.mp3"></audio>
     <div id="header">
-      <a href="./index.html" id="HawkStainable">HawkStainable</a>
-      <div id="links">
-          <a href="./education.html">Education</a>
-          <a href="./activity.html">Activity</a>
-          <a href="./mission.html">Mission & Team</a>
-          <button onclick="play()">Hawk</button>
-      </div>
+        <a href="./index.html" id="HawkStainable">HawkStainable</a>
+        <div id="links">
+            <a href="./education.html">Education</a>
+            <a href="./activity.html">Activity</a>
+            <a href="./mission.html">Mission & Team</a>
+            <button onclick="play()">Hawk</button>
+        </div>
     </div>
     <div id="display">
-        <h1 id="title">HawkStainable Living</h1>
-        <p id="subtitle">AI assisted sutainability eduaction for Lehigh and Bethlehem</p>
+        <h1 id="title">HawkStainablity Education</h1>
+        <p id="subtitle">Learn more about sustainability through our game!</p>
     </div>
-    <div id="assistant">
-        <h2>Hawky: Our Sust<u><b>ai</b></u>nable Assistant</h2>
-        <form id="assistantForm">
-            <label for="query">What can Hawky help you learn about today?</label>
-            <br />
-            <textarea id="queryInput" name="query" cols="60" rows="5" placeholder="How to properly recycle on campus?
-How can I make my lifestyle more sustainable?
-What resources are available to help me learn more about sustainability?"></textarea>
-            <br />
-            <button type="submit">Submit</button>
-        </form>
-        <!-- <textarea id="promptInput" name="query" cols="40" rows="5"></textarea>
-        <button id="submit">Submit</button> -->
-        <script>
-          let form = document.getElementById("assistantForm");
-          form.addEventListener("submit", async function(event) {
-            event.preventDefault();
-
-            const query = document.getElementById("queryInput").value;
-          const response = await fetch("http://localhost:8080/api/sendPrompt", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ query })
-        });
-        
-        const result = await response.json();
-        console.log(result);
-
-        let newParagraph = document.createElement("p");
-        newParagraph.setAttribute("class", "assistantResponse");
-        newParagraph.innerHTML = "Hawky says: " + result.query;
-        const assistantDiv = document.getElementById("assistant")
-        assistantDiv.appendChild(newParagraph);
-        assistantDiv.appendChild(document.createElement("br"));
-
-        // document.getElementById("assistantOutput").innerHTML += "\n\nHawky says: \n" + result.query;
-          });
-          
-        </script>
-        <p id="assistantOutput" class="output">OUTPUT</p>
-        
+    <div id="education">
+        <h2>Learning Center</h2>
+        <div class="info">
+         <h5>Courses and Learning Modules</h5>
+         <h4>Username</h4>
+         <hr />
+         <div class="course">
+            <div class="progress">
+                <h4>First Year Orientation</h4>
+                <h5>Progress: 0%</h5>
+            </div>
+            <h5>Course description</h5>
+         </div>
+         <div class="course">
+            <div class="progress">
+                <h4>Recycling Workshop</h4>
+                <h5>Progress: 0%</h5>
+            </div>
+            <h5>Course description</h5>
+         </div>
+         <hr />
+        </div>
     </div>
     <section class="game-section">
-        <h2 class="line-title">Sustainability Resources</h2>
+        <h2 class="line-title">Courses</h2>
         <div class="owl-carousel custom-carousel owl-theme">
           <a href="https://sustainability.lehigh.edu/erlp" class="item" style="background-image: url(https://sustainability.lehigh.edu/sites/sustainability.lehigh.edu/files/eco-rep-leadership-program_email-header_2500x900px.png);">
             <div class="item-desc">
