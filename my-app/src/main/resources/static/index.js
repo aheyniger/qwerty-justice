@@ -6,7 +6,7 @@ $(document).ready(function () {
       margin: 10,           // Add margin between items
       nav: false,            // Enable navigation arrows (next/prev)
       dots: true,           // Enable dots navigation
-      autoplay: true,       // Enable autoplay
+      autoplay: false,       // Enable autoplay
       autoplayTimeout: 3000, // Autoplay timeout (3 seconds)
       responsive: {
         0: {

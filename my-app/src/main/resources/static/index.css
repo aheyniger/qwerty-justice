@@ -8,7 +8,9 @@ html, body {
     justify-content: space-between;
     align-items: center;
     height: min(100px, 15vh);
-    margin: 0px 15px;
+    padding: 0px 15px;
+    margin-bottom:5px;
+    filter: drop-shadow(0 0 1rem rgba(0,0,0,0.6));
 }
 #links {
     display:flex;
@@ -39,6 +41,14 @@ html, body {
     right: 2.5vw;
     width: 50vw;
     filter: drop-shadow(0 0 1rem black);
+}
+#assistant {
+    margin-left: 3vw;
+    margin-top: 25px;
+}
+#assistant > h2 {
+    font-size: min(3vw, 30px);
+
 }
 * {
     margin: 0px;
