@@ -5,17 +5,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.qwerty.backend.helpers.ChatGPT;
-import com.qwerty.backend.helpers.Prompt;
-
 @RestController
 @RequestMapping("/api")
 public class BotController {
 
-    @PostMapping(value = "/ask", consumes = "application/json")
-    public String receiveText(@RequestBody Prompt prompt) {
+    @PostMapping(value = "/sendPrompt", consumes = "application/json")
+    public String receiveText(@RequestBody String prompt) {
         System.out.println("Got prompt!!");
-        String response = ChatGPT.sendPrompt(prompt.promptBody);
+        System.out.println(prompt);
+        // String response = ChatGPT.sendPrompt(prompt.promptBody);
+        String response = prompt;
         return response;
 
         // return "Received: " + prompt.promptBody;

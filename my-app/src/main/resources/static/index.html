@@ -34,14 +34,44 @@
     </div>
     <div id="assistant">
         <h2>Hawky: Our Sust<u><b>ai</b></u>nable Assistant</h2>
-        <form action="">
+        <form id="assistantForm">
             <label for="query">What can Hawky help you learn about today?</label>
             <br />
-            <textarea name="query" cols="40" rows="5"></textarea>
+            <textarea id="queryInput" name="query" cols="40" rows="5"></textarea>
             <br />
-            <input type="submit">
+            <button type="submit">Submit</button>
         </form>
-        <p class="output">OUTPUT</p>
+        <!-- <textarea id="promptInput" name="query" cols="40" rows="5"></textarea>
+        <button id="submit">Submit</button> -->
+        <script>
+          let form = document.getElementById("assistantForm");
+          form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const query = document.getElementById("queryInput").value;
+          const response = await fetch("http://localhost:8080/api/sendPrompt", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ query })
+        });
+        
+        const result = await response.json();
+        console.log(result);
+
+        let newParagraph = document.createElement("p");
+        newParagraph.setAttribute("class", "assistantResponse");
+        newParagraph.innerHTML = "Hawky says: " + result.query;
+        const assistantDiv = document.getElementById("assistant")
+        assistantDiv.appendChild(newParagraph);
+        assistantDiv.appendChild(document.createElement("br"));
+
+        // document.getElementById("assistantOutput").innerHTML += "\n\nHawky says: \n" + result.query;
+          });
+          
+        </script>
+        <p id="assistantOutput" class="output">OUTPUT</p>
         
     </div>
     <section class="game-section">
