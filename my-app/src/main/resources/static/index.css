@@ -22,4 +22,20 @@ html, body {
     background-size: cover;
     height: 60vh;
     color: white;
+    position: relative;
+}
+#title {
+    font-size: 7vw;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    filter: drop-shadow(0 0 1rem black);
+}
+#subtitle {
+    font-size: 3vw;
+    position: absolute;
+    top: 130px;
+    right: 20px;
+    width: 50vw;
+    filter: drop-shadow(0 0 1rem black);
 }
