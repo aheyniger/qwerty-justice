@@ -1,0 +1,25 @@
+html, body {
+    margin: 0;
+}
+#header {
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: min(100px, 15vh);
+}
+#links {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#links > * {
+    margin: 5px;
+}
+#display {
+    background-image: url('./images/Rossin.jpg');
+    background-size: cover;
+    height: 60vh;
+    color: white;
+}
