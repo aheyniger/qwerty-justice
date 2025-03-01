@@ -22,7 +22,7 @@ $(document).ready(function () {
     });
   
     // Handle item click interaction
-    $(".custom-carousel .item").click(function () {
+    $(".custom-carousel .item").hover(function () {
       $(".custom-carousel .item").not($(this)).removeClass("active");
       $(this).toggleClass("active");
     });
