@@ -1,4 +1,4 @@
-package com.qwerty.backend.helpers;
+package com.qwerty.backend;
 
 public class Prompt {
     public String promptBody;

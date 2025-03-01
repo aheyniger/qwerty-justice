@@ -1,4 +1,4 @@
-package com.qwerty.backend.helpers;
+package com.qwerty.backend;
 
 import java.io.BufferedReader;
 import java.io.IOException;
