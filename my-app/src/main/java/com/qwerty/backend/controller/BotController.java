@@ -14,7 +14,7 @@ public class BotController {
 
     @PostMapping(value = "/ask", consumes = "application/json")
     public String receiveText(@RequestBody Prompt prompt) {
-
+        System.out.println("Got prompt!!");
         String response = ChatGPT.sendPrompt(prompt.promptBody);
         return response;
 

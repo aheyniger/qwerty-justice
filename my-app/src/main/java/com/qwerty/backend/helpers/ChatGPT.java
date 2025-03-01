@@ -7,11 +7,12 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+
 public class ChatGPT {
     public static String sendPrompt(String prompt) {
        String uri = "https://api.openai.com/v1/chat/completions";
        String apiKey = System.getenv("GPT_KEY");
-       String model = "gpt-3.5-turbo";
+       String model = "gpt-3.5-turbo-0125";
 
        try {
             // URI uriObj = new URI(uri);
@@ -22,6 +23,8 @@ public class ChatGPT {
             connection.setRequestProperty("Authorization", "Bearer " + apiKey);
             connection.setRequestProperty("Content-Type", "application/json");
 
+            System.out.println("--------------------------------");
+            System.out.println("\nSending prompt...");
             // The request body
             String body = "{\"model\": \"" + model + "\", \"messages\": [{\"role\": \"user\", \"content\": \"" + prompt + "\"}]}";
             connection.setDoOutput(true);
@@ -40,7 +43,8 @@ public class ChatGPT {
                 response.append(line);
             }
             br.close();
-
+            System.out.println("Received response: " + response.toString());
+            System.out.println("--------------------------------");
             // calls the method to extract the message.
             return extractMessageFromJSONResponse(response.toString());
 
@@ -49,7 +53,7 @@ public class ChatGPT {
         //     throw new RuntimeException(e);
         // }
         catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Runtime exception: " + e);
         }
    }
 
