@@ -65,7 +65,7 @@ What resources are available to help me learn more about environmental injustice
 
         let newParagraph = document.createElement("p");
         newParagraph.setAttribute("class", "assistantResponse");
-        newParagraph.innerHTML = "Hawky says: " + result.query;
+        newParagraph.innerHTML = "Hawky says: <br>" + result.answer;
         const assistantDiv = document.getElementById("assistant")
         assistantDiv.appendChild(newParagraph);
         assistantDiv.appendChild(document.createElement("br"));
